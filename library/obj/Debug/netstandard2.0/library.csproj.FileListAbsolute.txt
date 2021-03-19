@@ -1,0 +1,20 @@
+E:\myproject\web api\library\bin\Debug\netstandard2.0\library.deps.json
+E:\myproject\web api\library\bin\Debug\netstandard2.0\library.dll
+E:\myproject\web api\library\obj\Debug\netstandard2.0\library.AssemblyInfoInputs.cache
+E:\myproject\web api\library\obj\Debug\netstandard2.0\library.AssemblyInfo.cs
+E:\myproject\web api\library\bin\Debug\netstandard2.0\library.pdb
+E:\myproject\web api\library\obj\Debug\netstandard2.0\library.dll
+E:\myproject\web api\library\obj\Debug\netstandard2.0\library.pdb
+E:\myproject\web api\library\obj\Debug\netstandard2.0\library.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
+D:\MYPROJECT\api-thuong-mai\web api\library\bin\Debug\netstandard2.0\library.deps.json
+D:\MYPROJECT\api-thuong-mai\web api\library\bin\Debug\netstandard2.0\library.dll
+D:\MYPROJECT\api-thuong-mai\web api\library\bin\Debug\netstandard2.0\library.pdb
+D:\MYPROJECT\api-thuong-mai\web api\library\obj\Debug\netstandard2.0\library.AssemblyInfoInputs.cache
+D:\MYPROJECT\api-thuong-mai\web api\library\obj\Debug\netstandard2.0\library.AssemblyInfo.cs
+D:\MYPROJECT\api-thuong-mai\web api\library\obj\Debug\netstandard2.0\library.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\api-thuong-mai\web api\library\obj\Debug\netstandard2.0\library.dll
+D:\MYPROJECT\api-thuong-mai\web api\library\obj\Debug\netstandard2.0\library.pdb
+=======
+E:\MYPROJECT\web api\library\obj\Debug\netstandard2.0\library.csprojAssemblyReference.cache
+>>>>>>> 7d7311650faf1cef46f93d42171dcea72c472e5a
