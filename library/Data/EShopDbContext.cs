@@ -1,10 +1,7 @@
 ﻿using library.Configurations;
 using library.Extensions;
 using library.Models.ESHOP;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace library.Data
 {
@@ -30,7 +27,7 @@ namespace library.Data
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
-
+            modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
             
 
             modelBuilder.SeedData();
@@ -60,5 +57,6 @@ namespace library.Data
 
 
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
     }
 }

@@ -2,7 +2,6 @@ using library;
 using library.Data;
 using library.Interfaces;
 using library.Interfaces.Auth;
-using library.Models.ESHOP;
 using library.Repositories;
 using library.Repositories.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -15,7 +14,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
-using System;
 using System.Text;
 
 namespace api
