@@ -1,13 +1,10 @@
-﻿using application.Catalog.Dtos;
-using application.Catalog.Products.Dtos;
-using application.Catalog.Products.Dtos.Public;
-using library.Data;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
+﻿using library.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using view_model.Catalog.Products;
+using view_model.Common;
 
 namespace application.Catalog.Products
 {
@@ -18,19 +15,23 @@ namespace application.Catalog.Products
         {
             _dbContext = dbContext;
         }
-        public async Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request)
+        public async Task<PagedResult<ProductViewModel>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request)
         {
+            //1. Select join
             var query = from p in _dbContext.Products
                         join pt in _dbContext.ProductTranslations on p.Id equals pt.ProductId
                         join pic in _dbContext.ProductInCategories on p.Id equals pic.ProductId
-                        join c in _dbContext.Categories on pic.ProductId equals c.Id
+                        join c in _dbContext.Categories on pic.CategoryId equals c.Id
+                        where pt.LanguageId == languageId
                         select new { p, pt, pic };
-            
+            //2. filter
             if (request.CategoryId.HasValue && request.CategoryId.Value > 0)
             {
                 query = query.Where(p => p.pic.CategoryId == request.CategoryId);
             }
+            //3. Paging
             int totalRow = await query.CountAsync();
+
             var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
                 .Take(request.PageSize)
                 .Select(x => new ProductViewModel()
@@ -48,8 +49,9 @@ namespace application.Catalog.Products
                     SeoTitle = x.pt.SeoTitle,
                     Stock = x.p.Stock,
                     ViewCount = x.p.ViewCount
-
                 }).ToListAsync();
+
+            //4. Select and projection
             var pagedResult = new PagedResult<ProductViewModel>()
             {
                 TotalRecord = totalRow,

@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace application.Catalog.Products.Dtos
+namespace view_model.Catalog.Products
 {
     public class ProductViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime DateCreated { get; set; }
-        public string  Description { get; set; }
+        public string Description { get; set; }
         public string Details { get; set; }
         public string LanguageId { get; set; }
         public decimal OriginalPrice { get; set; }

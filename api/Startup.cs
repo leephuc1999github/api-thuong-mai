@@ -1,3 +1,5 @@
+using application.Catalog.Common;
+using application.Catalog.Products;
 using library;
 using library.Data;
 using library.Interfaces;
@@ -13,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using System.Text;
 
@@ -44,7 +47,10 @@ namespace api
             services.AddDbContext<IdentityEShopDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("IdentityEShopConnection"))
             );
-            //services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<IdentityEShopDbContext>();
+            services.AddTransient<IPublicProductService, PublicProductService>();
+            services.AddTransient<IManageProductService,ManageProductService>();
+            services.AddTransient<IStorageService, FileStorageService>();
+            services.AddSwaggerGen(c=>c.SwaggerDoc("v1",new OpenApiInfo() { Title = "Swagger eshop solution" , Version = "v1"}));
             #region appdbcontext
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection"))
@@ -107,6 +113,8 @@ namespace api
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseSwagger();
+            app.UseSwaggerUI(c=>c.SwaggerEndpoint("/swagger/v1/swagger.json","Swagger eshop solution"));
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

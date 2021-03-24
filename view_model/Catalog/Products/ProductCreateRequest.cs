@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.AspNetCore.Http;
 
-namespace application.Catalog.Products.Dtos.Manage
+namespace view_model.Catalog.Products
 {
     public class ProductCreateRequest
     {
@@ -17,6 +15,6 @@ namespace application.Catalog.Products.Dtos.Manage
 
         public string SeoAlias { get; set; }
         public string LanguageId { set; get; }
-
+        public IFormFile ThumbnailImage { get; set; }
     }
 }

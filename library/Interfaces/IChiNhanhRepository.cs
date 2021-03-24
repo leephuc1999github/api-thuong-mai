@@ -8,5 +8,6 @@ namespace library.Interfaces
 {
     public interface IChiNhanhRepository : IRepository<ChiNhanh>
     {
+        void sayhello();
     }
 }

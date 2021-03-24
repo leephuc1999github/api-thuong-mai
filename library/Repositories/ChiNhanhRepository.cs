@@ -9,5 +9,10 @@ namespace library.Repositories
         {
             
         }
+
+        public void sayhello()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
