@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -11,5 +11,20 @@
     <ProjectReference Include="..\utilities\utilities.csproj" />
     <ProjectReference Include="..\view_model\view_model.csproj" />
   </ItemGroup>
+
+</Project>
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\library\library.csproj" />
+	  <ProjectReference Include="..\utilities\utilities.csproj" />
+	  <ProjectReference Include="..\view_model\view_model.csproj" />
+	</ItemGroup>
 
 </Project>

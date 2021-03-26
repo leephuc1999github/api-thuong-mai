@@ -1,7 +1,19 @@
+<<<<<<< .mine
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+=======
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+>>>>>>> .theirs
+    <TargetFramework>netstandard2.0</TargetFramework>
+<<<<<<< .mine
   </PropertyGroup>
 
 </Project>
+=======
+  </PropertyGroup>
+
+</Project>
+>>>>>>> .theirs
