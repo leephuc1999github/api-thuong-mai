@@ -1,11 +1,14 @@
-using application.Catalog.Common;
+using application.Catalog.Categorires;
 using application.Catalog.Products;
-using library;
+using application.Common;
+using application.System.Languages;
+using application.System.Roles;
+using application.System.User;
+using application.System.Users;
+using application.Utilities.Slides;
+using FluentValidation.AspNetCore;
 using library.Data;
-using library.Interfaces;
-using library.Interfaces.Auth;
-using library.Repositories;
-using library.Repositories.Auth;
+using library.Models.ESHOP;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,7 +20,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Text;
+using view_model.System.Users;
 
 namespace api
 {
@@ -37,6 +42,7 @@ namespace api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>())
                 .AddNewtonsoftJson(
                     options => options.SerializerSettings.Formatting = Formatting.Indented
                 );
@@ -47,21 +53,61 @@ namespace api
             services.AddDbContext<IdentityEShopDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("IdentityEShopConnection"))
             );
-            services.AddTransient<IPublicProductService, PublicProductService>();
-            services.AddTransient<IManageProductService,ManageProductService>();
             services.AddTransient<IStorageService, FileStorageService>();
-            services.AddSwaggerGen(c=>c.SwaggerDoc("v1",new OpenApiInfo() { Title = "Swagger eshop solution" , Version = "v1"}));
-            #region appdbcontext
-            services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection"))
-            );
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+
+            services.AddTransient<IPublicProductService, PublicProductService>();
+            services.AddTransient<IManageProductService, ManageProductService>();
+            services.AddTransient<ICategoryService,CategoryService>();
+            services.AddTransient<UserManager<AppUser>, UserManager<AppUser>>();
+            services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
+            services.AddTransient<RoleManager<AppRole>, RoleManager<AppRole>>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ILanguageService, LanguageService>();
+            services.AddTransient<ISlideService, SlideService>();
+            services.AddTransient<IRoleService, RoleService>();
+            //services.AddTransient<IValidator<LoginRequest>,LoginRequestValidator>();
+            //services.AddTransient<IValidator<RegisterRequest>, RegisterRequestValidator>();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo() { Title = "Swagger eshop solution", Version = "v1" });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n
+                      Enter 'Bearer' [space] and then your token in the text input below.
+                      \r\n\r\nExample: 'Bearer 12345abcdef'",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                  {
+                    {
+                      new OpenApiSecurityScheme
+                      {
+                        Reference = new OpenApiReference
+                          {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                          },
+                          Scheme = "oauth2",
+                          Name = "Bearer",
+                          In = ParameterLocation.Header,
+                        },
+                        new List<string>()
+                      }
+                    });
+            });
+           
+            
+            services.AddIdentity<AppUser, AppRole>(options =>
             {
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
                 options.Password.RequiredLength = 5;
 
-            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+            }).AddEntityFrameworkStores<IdentityEShopDbContext>().AddDefaultTokenProviders();
 
             services.AddAuthentication(auth => 
             {
@@ -80,24 +126,27 @@ namespace api
                     ValidateIssuerSigningKey = true
                 };
             });
+            #region appdbcontext
+            //services.AddDbContext<AppDbContext>(options =>
+            //    options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection"))
+            //);
+            //services.AddScoped<IUserRepository, UserRepository>();
 
-            services.AddScoped<IUserRepository, UserRepository>();
-
-            services.AddTransient<IDoiTacRepository, DoiTacRepository>();
-            services.AddTransient<IHopDongRepository, HopDongRepository>();
-            services.AddTransient<ICuaHangRepository, CuaHangRepository>();
-            services.AddTransient<IChiNhanhRepository, ChiNhanhRepository>();
-            services.AddTransient<IGiamDocRepository, GiamDocRepository>();
-            services.AddTransient<IGiamSatRepository, GiamSatRepository>();
-            services.AddTransient<IKhachHangRepository, KhachHangRepository>();
-            services.AddTransient<IKinhDoanhRepository, KinhDoanhRepository>();
-            services.AddTransient<IMatHangRepository, MatHangRepository>();
-            services.AddTransient<IMuaRepository, MuaRepository>();
-            services.AddTransient<INhanVienRepository, NhanVienRepository>();
-            services.AddTransient<ITinhThanhRepository, TinhThanhRepository>();
-            services.AddTransient<INhanVienBaoVeRepository, NhanVienBaoVeRepository>();
-            services.AddTransient<INhanVienQuanLyRepository, NhanVienQuanLyRepository>();
-            services.AddTransient<INhanVienDaiDienRepository, NhanVienDaiDienRepository>();
+            //services.AddTransient<IDoiTacRepository, DoiTacRepository>();
+            //services.AddTransient<IHopDongRepository, HopDongRepository>();
+            //services.AddTransient<ICuaHangRepository, CuaHangRepository>();
+            //services.AddTransient<IChiNhanhRepository, ChiNhanhRepository>();
+            //services.AddTransient<IGiamDocRepository, GiamDocRepository>();
+            //services.AddTransient<IGiamSatRepository, GiamSatRepository>();
+            //services.AddTransient<IKhachHangRepository, KhachHangRepository>();
+            //services.AddTransient<IKinhDoanhRepository, KinhDoanhRepository>();
+            //services.AddTransient<IMatHangRepository, MatHangRepository>();
+            //services.AddTransient<IMuaRepository, MuaRepository>();
+            //services.AddTransient<INhanVienRepository, NhanVienRepository>();
+            //services.AddTransient<ITinhThanhRepository, TinhThanhRepository>();
+            //services.AddTransient<INhanVienBaoVeRepository, NhanVienBaoVeRepository>();
+            //services.AddTransient<INhanVienQuanLyRepository, NhanVienQuanLyRepository>();
+            //services.AddTransient<INhanVienDaiDienRepository, NhanVienDaiDienRepository>();
             #endregion
         }
 

@@ -7,8 +7,53 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Interfaces\Base\IQueryRepository.cs" />
-    <Compile Remove="Repositories\Base\QueryRepository.cs" />
+    <Compile Remove="Common\**" />
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="Models\Auth\**" />
+    <Compile Remove="Models\Base\**" />
+    <Compile Remove="Repositories\**" />
+    <EmbeddedResource Remove="Common\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Models\Auth\**" />
+    <EmbeddedResource Remove="Models\Base\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <None Remove="Common\**" />
+    <None Remove="Interfaces\**" />
+    <None Remove="Models\Auth\**" />
+    <None Remove="Models\Base\**" />
+    <None Remove="Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\AppDbContext.cs" />
+    <Compile Remove="Migrations\20210218072444_initial.cs" />
+    <Compile Remove="Migrations\20210218072444_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210218073445_add-table-nhanvien-nhanviendaidien-ky.cs" />
+    <Compile Remove="Migrations\20210218073445_add-table-nhanvien-nhanviendaidien-ky.Designer.cs" />
+    <Compile Remove="Migrations\20210219041530_complete-base.cs" />
+    <Compile Remove="Migrations\20210219041530_complete-base.Designer.cs" />
+    <Compile Remove="Migrations\20210219081113_test-change-model.cs" />
+    <Compile Remove="Migrations\20210219081113_test-change-model.Designer.cs" />
+    <Compile Remove="Migrations\20210221061030_alter-model-base.cs" />
+    <Compile Remove="Migrations\20210221061030_alter-model-base.Designer.cs" />
+    <Compile Remove="Migrations\20210224074301_add-author-authen.cs" />
+    <Compile Remove="Migrations\20210224074301_add-author-authen.Designer.cs" />
+    <Compile Remove="Migrations\AppDbContextModelSnapshot.cs" />
+    <Compile Remove="Models\ChiNhanh.cs" />
+    <Compile Remove="Models\CuaHang.cs" />
+    <Compile Remove="Models\DoiTac.cs" />
+    <Compile Remove="Models\GiamDoc.cs" />
+    <Compile Remove="Models\GiamSat.cs" />
+    <Compile Remove="Models\HopDong.cs" />
+    <Compile Remove="Models\KhachHang.cs" />
+    <Compile Remove="Models\KinhDoanh.cs" />
+    <Compile Remove="Models\MatHang.cs" />
+    <Compile Remove="Models\Mua.cs" />
+    <Compile Remove="Models\NhanVien.cs" />
+    <Compile Remove="Models\NhanVienBaoVe.cs" />
+    <Compile Remove="Models\NhanVienDaiDien.cs" />
+    <Compile Remove="Models\NhanVienQuanLy.cs" />
+    <Compile Remove="Models\TinhThanh.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace application.Catalog.Common
+namespace application.Common
 {
     public interface IStorageService
     {

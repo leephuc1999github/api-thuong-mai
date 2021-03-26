@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace application.Catalog.Common
+namespace application.Common
 {
     public class FileStorageService : IStorageService
     {
@@ -10,7 +10,7 @@ namespace application.Catalog.Common
         private const string USER_CONTENT_FOLDER_NAME = "user_content";
         public FileStorageService(IWebHostEnvironment webHostEnviroment)
         {
-            _userContentFolder = Path.Combine(webHostEnviroment.ContentRootPath,USER_CONTENT_FOLDER_NAME);
+            _userContentFolder = Path.Combine(webHostEnviroment.ContentRootPath, USER_CONTENT_FOLDER_NAME);
         }
         public async Task DeleteFileAsync(string fileName)
         {
