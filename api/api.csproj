@@ -21,10 +21,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\application\application.csproj" />
     <ProjectReference Include="..\library\library.csproj" />
+    <ProjectReference Include="..\view_model\view_model.csproj" />
   </ItemGroup>
 
 
