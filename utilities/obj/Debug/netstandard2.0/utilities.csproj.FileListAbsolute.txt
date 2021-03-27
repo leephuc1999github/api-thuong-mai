@@ -1,0 +1,9 @@
+E:\MYPROJECT\web api\utilities\bin\Debug\netstandard2.0\utilities.deps.json
+E:\MYPROJECT\web api\utilities\bin\Debug\netstandard2.0\utilities.dll
+E:\MYPROJECT\web api\utilities\bin\Debug\netstandard2.0\utilities.pdb
+E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.csprojAssemblyReference.cache
+E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.AssemblyInfoInputs.cache
+E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.AssemblyInfo.cs
+E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.csproj.CoreCompileInputs.cache
+E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.dll
+E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.pdb

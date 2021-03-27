@@ -39,13 +39,9 @@
   <ItemGroup>
     <ProjectReference Include="..\application\application.csproj" />
     <ProjectReference Include="..\library\library.csproj" />
-<<<<<<< .mine
     <ProjectReference Include="..\view_model\view_model.csproj" />
-
-=======
     <ProjectReference Include="..\utilities\utilities.csproj" />
     <ProjectReference Include="..\view_model\view_model.csproj" />
->>>>>>> .theirs
   </ItemGroup>
 
 

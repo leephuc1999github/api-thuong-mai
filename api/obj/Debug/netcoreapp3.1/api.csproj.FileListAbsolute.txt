@@ -282,3 +282,17 @@ D:\MYPROJECT\api-thuong-mai\api\obj\Debug\netcoreapp3.1\api.genruntimeconfig.cac
 D:\MYPROJECT\api-thuong-mai\api\bin\Debug\netcoreapp3.1\FluentValidation.dll
 D:\MYPROJECT\api-thuong-mai\api\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 D:\MYPROJECT\api-thuong-mai\api\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\application.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\utilities.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\view_model.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\FluentValidation.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\application.pdb
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\view_model.pdb
+E:\MYPROJECT\web api\api\bin\Debug\netcoreapp3.1\utilities.pdb
+E:\MYPROJECT\web api\api\obj\Debug\netcoreapp3.1\api.MvcApplicationPartsAssemblyInfo.cs

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MYPROJECT\\api-thuong-mai\\api\\api.csproj": {}
+    "E:\\MYPROJECT\\web api\\api\\api.csproj": {}
   },
   "projects": {
-    "D:\\MYPROJECT\\api-thuong-mai\\api\\api.csproj": {
+    "E:\\MYPROJECT\\web api\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MYPROJECT\\api-thuong-mai\\api\\api.csproj",
+        "projectUniqueName": "E:\\MYPROJECT\\web api\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MYPROJECT\\api-thuong-mai\\api\\obj\\",
+        "projectPath": "E:\\MYPROJECT\\web api\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\phucl\\.nuget\\packages\\",
+        "outputPath": "E:\\MYPROJECT\\web api\\api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phucl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,17 +28,17 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\MYPROJECT\\api-thuong-mai\\application\\application.csproj": {
-                "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\application\\application.csproj"
+              "E:\\MYPROJECT\\web api\\application\\application.csproj": {
+                "projectPath": "E:\\MYPROJECT\\web api\\application\\application.csproj"
               },
-              "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj": {
-                "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj"
+              "E:\\MYPROJECT\\web api\\library\\library.csproj": {
+                "projectPath": "E:\\MYPROJECT\\web api\\library\\library.csproj"
               },
-              "D:\\MYPROJECT\\api-thuong-mai\\utilities\\utilities.csproj": {
-                "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\utilities\\utilities.csproj"
+              "E:\\MYPROJECT\\web api\\utilities\\utilities.csproj": {
+                "projectPath": "E:\\MYPROJECT\\web api\\utilities\\utilities.csproj"
               },
-              "D:\\MYPROJECT\\api-thuong-mai\\view_model\\view_model.csproj": {
-                "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\view_model\\view_model.csproj"
+              "E:\\MYPROJECT\\web api\\view_model\\view_model.csproj": {
+                "projectPath": "E:\\MYPROJECT\\web api\\view_model\\view_model.csproj"
               }
             }
           }
@@ -119,24 +116,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\MYPROJECT\\api-thuong-mai\\application\\application.csproj": {
+    "E:\\MYPROJECT\\web api\\application\\application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MYPROJECT\\api-thuong-mai\\application\\application.csproj",
+        "projectUniqueName": "E:\\MYPROJECT\\web api\\application\\application.csproj",
         "projectName": "application",
-        "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\application\\application.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MYPROJECT\\api-thuong-mai\\application\\obj\\",
+        "projectPath": "E:\\MYPROJECT\\web api\\application\\application.csproj",
+        "packagesPath": "C:\\Users\\phucl\\.nuget\\packages\\",
+        "outputPath": "E:\\MYPROJECT\\web api\\application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phucl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,14 +144,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj": {
-                "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj"
+              "E:\\MYPROJECT\\web api\\library\\library.csproj": {
+                "projectPath": "E:\\MYPROJECT\\web api\\library\\library.csproj"
               },
-              "D:\\MYPROJECT\\api-thuong-mai\\utilities\\utilities.csproj": {
-                "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\utilities\\utilities.csproj"
+              "E:\\MYPROJECT\\web api\\utilities\\utilities.csproj": {
+                "projectPath": "E:\\MYPROJECT\\web api\\utilities\\utilities.csproj"
               },
-              "D:\\MYPROJECT\\api-thuong-mai\\view_model\\view_model.csproj": {
-                "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\view_model\\view_model.csproj"
+              "E:\\MYPROJECT\\web api\\view_model\\view_model.csproj": {
+                "projectPath": "E:\\MYPROJECT\\web api\\view_model\\view_model.csproj"
               }
             }
           }
@@ -189,24 +183,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj": {
+    "E:\\MYPROJECT\\web api\\library\\library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj",
+        "projectUniqueName": "E:\\MYPROJECT\\web api\\library\\library.csproj",
         "projectName": "library",
-        "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MYPROJECT\\api-thuong-mai\\library\\obj\\",
+        "projectPath": "E:\\MYPROJECT\\web api\\library\\library.csproj",
+        "packagesPath": "C:\\Users\\phucl\\.nuget\\packages\\",
+        "outputPath": "E:\\MYPROJECT\\web api\\library\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phucl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -285,24 +276,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\MYPROJECT\\api-thuong-mai\\utilities\\utilities.csproj": {
+    "E:\\MYPROJECT\\web api\\utilities\\utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MYPROJECT\\api-thuong-mai\\utilities\\utilities.csproj",
+        "projectUniqueName": "E:\\MYPROJECT\\web api\\utilities\\utilities.csproj",
         "projectName": "utilities",
-        "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\utilities\\utilities.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MYPROJECT\\api-thuong-mai\\utilities\\obj\\",
+        "projectPath": "E:\\MYPROJECT\\web api\\utilities\\utilities.csproj",
+        "packagesPath": "C:\\Users\\phucl\\.nuget\\packages\\",
+        "outputPath": "E:\\MYPROJECT\\web api\\utilities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phucl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -345,24 +333,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\MYPROJECT\\api-thuong-mai\\view_model\\view_model.csproj": {
+    "E:\\MYPROJECT\\web api\\view_model\\view_model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MYPROJECT\\api-thuong-mai\\view_model\\view_model.csproj",
+        "projectUniqueName": "E:\\MYPROJECT\\web api\\view_model\\view_model.csproj",
         "projectName": "view_model",
-        "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\view_model\\view_model.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MYPROJECT\\api-thuong-mai\\view_model\\obj\\",
+        "projectPath": "E:\\MYPROJECT\\web api\\view_model\\view_model.csproj",
+        "packagesPath": "C:\\Users\\phucl\\.nuget\\packages\\",
+        "outputPath": "E:\\MYPROJECT\\web api\\view_model\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phucl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -390,11 +375,11 @@
           "dependencies": {
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[8.6.2, )"
+              "version": "[8.5.0, )"
             },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -408,14 +393,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

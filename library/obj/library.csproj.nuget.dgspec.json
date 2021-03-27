@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj": {}
+    "E:\\MYPROJECT\\web api\\library\\library.csproj": {}
   },
   "projects": {
-    "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj": {
+    "E:\\MYPROJECT\\web api\\library\\library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj",
+        "projectUniqueName": "E:\\MYPROJECT\\web api\\library\\library.csproj",
         "projectName": "library",
-        "projectPath": "D:\\MYPROJECT\\api-thuong-mai\\library\\library.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MYPROJECT\\api-thuong-mai\\library\\obj\\",
+        "projectPath": "E:\\MYPROJECT\\web api\\library\\library.csproj",
+        "packagesPath": "C:\\Users\\phucl\\.nuget\\packages\\",
+        "outputPath": "E:\\MYPROJECT\\web api\\library\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phucl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +93,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

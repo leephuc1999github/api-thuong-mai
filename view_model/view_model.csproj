@@ -1,42 +1,13 @@
-<<<<<<< .mine
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-<<<<<<< .mine
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
-
-
-
-
-
-
-
-
-
-
-
-=======
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.0" />
   </ItemGroup>
 
 </Project>
-=======
-<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
->>>>>>> .theirs
-  </PropertyGroup>
-
-  <ItemGroup>
-	<PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.4" />
-  </ItemGroup>
-
-</Project>
->>>>>>> .theirs

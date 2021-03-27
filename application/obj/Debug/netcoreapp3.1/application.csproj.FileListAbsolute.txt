@@ -1,0 +1,16 @@
+E:\MYPROJECT\web api\application\obj\Debug\netcoreapp3.1\application.csprojAssemblyReference.cache
+E:\MYPROJECT\web api\application\obj\Debug\netcoreapp3.1\application.AssemblyInfoInputs.cache
+E:\MYPROJECT\web api\application\obj\Debug\netcoreapp3.1\application.AssemblyInfo.cs
+E:\MYPROJECT\web api\application\obj\Debug\netcoreapp3.1\application.csproj.CoreCompileInputs.cache
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\application.deps.json
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\application.dll
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\application.pdb
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\library.dll
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\utilities.dll
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\view_model.dll
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\library.pdb
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\utilities.pdb
+E:\MYPROJECT\web api\application\bin\Debug\netcoreapp3.1\view_model.pdb
+E:\MYPROJECT\web api\application\obj\Debug\netcoreapp3.1\application.csproj.CopyComplete
+E:\MYPROJECT\web api\application\obj\Debug\netcoreapp3.1\application.dll
+E:\MYPROJECT\web api\application\obj\Debug\netcoreapp3.1\application.pdb
