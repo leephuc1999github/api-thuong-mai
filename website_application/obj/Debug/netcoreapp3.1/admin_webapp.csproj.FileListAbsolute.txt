@@ -111,7 +111,6 @@ E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\zh-Hant\Microso
 E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\view_model.dll
 E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\view_model.pdb
 E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\admin_webapp.MvcApplicationPartsAssemblyInfo.cs
-E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\User\Login.cshtml.g.cs
 E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
 E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -401,3 +400,9 @@ E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\Microsoft.Ident
 E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 E:\MYPROJECT\web api\website_application\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\User\Create.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\User\Edit.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Pager\Default.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs

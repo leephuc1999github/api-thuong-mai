@@ -14,8 +14,8 @@ namespace application.Catalog.Products
         Task<bool> UpdatePrice(int productId, decimal newPrice);
         Task<bool> UpdateStock(int productId , int addedQuantity);
         Task AddViewCount(int productId);
-        Task<ProductViewModel> GetById(int productId, string languageId);
-        Task<PagedResult<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
+        Task<ProductVm> GetById(int productId, string languageId);
+        Task<ApiResult<PagedResult<ProductVm>>> GetAllPaging(GetManageProductPagingRequest request);
         Task<int> AddImage(int productId, ProductImageCreateRequest request);
         Task<int> RemoveImage(int imageId);
         Task<int> UpdateImage(int imageId, ProductImageUpdateRequest request);

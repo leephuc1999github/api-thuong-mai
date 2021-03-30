@@ -15,7 +15,7 @@ namespace application.Catalog.Products
         {
             _dbContext = dbContext;
         }
-        public async Task<PagedResult<ProductViewModel>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request)
+        public async Task<PagedResult<ProductVm>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request)
         {
             //1. Select join
             var query = from p in _dbContext.Products
@@ -34,7 +34,7 @@ namespace application.Catalog.Products
 
             var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
                 .Take(request.PageSize)
-                .Select(x => new ProductViewModel()
+                .Select(x => new ProductVm()
                 {
                     Id = x.p.Id,
                     Name = x.pt.Name,
@@ -52,7 +52,7 @@ namespace application.Catalog.Products
                 }).ToListAsync();
 
             //4. Select and projection
-            var pagedResult = new PagedResult<ProductViewModel>()
+            var pagedResult = new PagedResult<ProductVm>()
             {
                 TotalRecord = totalRow,
                 Items = data

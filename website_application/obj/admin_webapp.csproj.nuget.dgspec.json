@@ -116,6 +116,10 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.IdentityModel.Logging": {
               "target": "Package",
               "version": "[6.9.0, )"

@@ -1,0 +1,82 @@
+﻿@using view_model.Common;
+@using view_model.System.Users;
+@model ApiResult<PagedResult<UserVm>>
+@{ 
+    int count = 1;
+}
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Users</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Users</a></li>
+                    <li class="breadcrumb-item active">List</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">List Users</h3>
+                <div class="card-tools">
+                    <a class="btn btn-success" asp-action="Create" asp-controller="User">Create New</a>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10px">#</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>Phone Number</th>
+                            <th>UserName</th>
+                            <th>Email</th>
+                            <th>Dob</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.ResultObj.Items)
+                        {
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
+                                <td>@item.PhoneNumber</td>
+                                <td>@item.UserName</td>
+                                <td>@item.Email</td>
+                                <td>@item.Dob</td>
+                                <td>
+                                    <form method="post" action="Delete/@item.Id">
+                                        <a href="/User/Edit/@item.Id"><i class="fa fa-edit"></i></a>
+                                        <button type="submit" class="btn-link" onclick="return confirm('Do you delete ?')"><i class="fa fa-trash"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                            count++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+            @await Component.InvokeAsync("Pager", Model.ResultObj)
+        </div>
+
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->

@@ -24,6 +24,7 @@ namespace view_model.System.Users
         public string Email { get; set; }
 
         [Display(Name = "Ngày sinh")]
+        [DataType(DataType.Date)]
         public DateTime Dob { get; set; }
 
         public IList<string> Roles { get; set; }

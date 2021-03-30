@@ -30,6 +30,13 @@ namespace api.Controllers
             return Ok(products);
         }
 
+        [HttpGet("paging")]
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetManageProductPagingRequest request)
+        {
+            var products = await _manageProductService.GetAllPaging(request);
+            return Ok(products);
+        }
+
         //http://localhost:port/product/1
         [HttpGet("{productId}/{languageId}")]
         public async Task<IActionResult> GetById(int productId, string languageId)

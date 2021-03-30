@@ -157,12 +157,12 @@ namespace api
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseSwagger();
+            
             app.UseSwaggerUI(c=>c.SwaggerEndpoint("/swagger/v1/swagger.json","Swagger eshop solution"));
             app.UseEndpoints(endpoints =>
             {

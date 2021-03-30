@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "utilities", "utilities\util
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "view_model", "view_model\view_model.csproj", "{F5105210-A4B1-4303-B5A1-A132A1790CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "admin_webapp", "website_application\admin_webapp.csproj", "{D96E5EB4-583F-408A-83FE-8E25A70B9992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "admin_webapp", "website_application\admin_webapp.csproj", "{D96E5EB4-583F-408A-83FE-8E25A70B9992}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

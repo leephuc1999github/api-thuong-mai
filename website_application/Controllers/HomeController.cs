@@ -4,8 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace admin_webapp.Controllers
 {
-    [Authorize]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
 

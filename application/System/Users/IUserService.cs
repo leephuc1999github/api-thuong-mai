@@ -9,7 +9,7 @@ namespace application.System.Users
     {
         Task<string> Authencate(LoginRequest request);
 
-        Task<bool> Register(RegisterRequest request);
+        Task<ApiResult<bool>> Register(RegisterRequest request);
         Task<ApiResult<bool>> Update(Guid id, UserUpdateRequest request);
 
         Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request);

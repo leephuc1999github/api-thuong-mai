@@ -19,7 +19,7 @@ namespace website_application
             services.AddHttpClient();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => 
             {
-                options.LoginPath = "/User/Login";
+                options.LoginPath = "/Login/Index";
                 options.AccessDeniedPath = "/User/Forbidden/";
             });
             services.AddControllersWithViews()
@@ -27,6 +27,8 @@ namespace website_application
             services.AddAuthorization();
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddTransient<IUserApiClient,UserApiClient>();
+            services.AddTransient<IProductApiClient, ProductApiClient>();
+            services.AddTransient<ICategoryApiClient,CategoryApiClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

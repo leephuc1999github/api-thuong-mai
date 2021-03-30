@@ -6,3 +6,4 @@ E:\MYPROJECT\web api\view_model\bin\Debug\netcoreapp3.1\view_model.dll
 E:\MYPROJECT\web api\view_model\bin\Debug\netcoreapp3.1\view_model.pdb
 E:\MYPROJECT\web api\view_model\obj\Debug\netcoreapp3.1\view_model.dll
 E:\MYPROJECT\web api\view_model\obj\Debug\netcoreapp3.1\view_model.pdb
+E:\MYPROJECT\web api\view_model\obj\Debug\netcoreapp3.1\view_model.csprojAssemblyReference.cache
