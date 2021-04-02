@@ -1,6 +1,5 @@
 ﻿using library.Models.ESHOP;
 using library.Models.ESHOP.Enums;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -82,7 +81,7 @@ namespace library.Extensions
             modelBuilder.Entity<ProductInCategory>().HasData(
                 new ProductInCategory() { ProductId = 1, CategoryId = 1 }
                 );
-            
+
 
         }
     }

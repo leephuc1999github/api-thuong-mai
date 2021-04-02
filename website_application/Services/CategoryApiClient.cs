@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,15 +13,17 @@ namespace admin_webapp.Services
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public CategoryApiClient(IHttpClientFactory httpClientFactory , IHttpContextAccessor httpContextAccessor)
+        private readonly IConfiguration _configuration;
+        public CategoryApiClient(IHttpClientFactory httpClientFactory , IHttpContextAccessor httpContextAccessor,IConfiguration configuration)
         {
             _httpClientFactory = httpClientFactory;
             _httpContextAccessor = httpContextAccessor;
+            _configuration = configuration;
         }
         public async Task<List<CategoryVm>> GetAll(string languageId)
         {
             var client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://localhost:5000");
+            client.BaseAddress = new Uri(_configuration["DomainString"]);
             var response = await client.GetAsync($"/api/categories?languageId={languageId}");
             var body = await response.Content.ReadAsStringAsync();
             if (response.IsSuccessStatusCode)

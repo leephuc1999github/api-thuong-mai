@@ -5,9 +5,9 @@ using System;
 
 namespace library.Extensions
 {
-    public static class IdentityModelBuilderExtensions 
+    public static class IdentityModelBuilderExtensions
     {
-        public static void SeedIdentity( this ModelBuilder modelBuilder)
+        public static void SeedIdentity(this ModelBuilder modelBuilder)
         {
             // any guid
             var roleId = new Guid("8D04DCE2-969A-435D-BBA4-DF3F325983DC");

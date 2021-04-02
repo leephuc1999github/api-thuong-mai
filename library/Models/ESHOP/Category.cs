@@ -1,11 +1,9 @@
 ﻿using library.Models.ESHOP.Enums;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace library.Models.ESHOP
 {
-    public class Category 
+    public class Category
     {
         public int Id { set; get; }
         public int SortOrder { set; get; }

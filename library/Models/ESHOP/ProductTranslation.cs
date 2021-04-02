@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace library.Models.ESHOP
+﻿namespace library.Models.ESHOP
 {
     public class ProductTranslation
     {

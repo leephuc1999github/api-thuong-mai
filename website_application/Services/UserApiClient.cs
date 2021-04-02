@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;
@@ -14,17 +15,19 @@ namespace admin_webapp.Services
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public UserApiClient(IHttpClientFactory httpClientFactory , IHttpContextAccessor httpContextAccessor)
+        private readonly IConfiguration _configuration;
+        public UserApiClient(IHttpClientFactory httpClientFactory , IHttpContextAccessor httpContextAccessor, IConfiguration configuration)
         {
             _httpClientFactory = httpClientFactory;
             _httpContextAccessor = httpContextAccessor;
+            _configuration = configuration;
         }
         public async Task<string> Authenticate(LoginRequest request)
         {
             var json = JsonConvert.SerializeObject(request);
             var httpContext = new StringContent(json, Encoding.UTF8 , "application/json");
             var client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://localhost:5000");
+            client.BaseAddress = new Uri(_configuration["DomainString"]);
             var response = await client.PostAsync("api/users/authenticate", httpContext);
             var token = await response.Content.ReadAsStringAsync();
             return token;
@@ -34,7 +37,7 @@ namespace admin_webapp.Services
         {
             var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
             var client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://localhost:5000");
+            client.BaseAddress = new Uri(_configuration["DomainString"]);
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
             var response = await client.DeleteAsync($"/api/users/{id}");
             var body = await response.Content.ReadAsStringAsync();
@@ -48,7 +51,7 @@ namespace admin_webapp.Services
         {
             var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
             var client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://localhost:5000");
+            client.BaseAddress = new Uri(_configuration["DomainString"]);
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
             var response = await client.GetAsync($"/api/users/{id}");
             var body = await response.Content.ReadAsStringAsync();
@@ -61,7 +64,7 @@ namespace admin_webapp.Services
         public async Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request)
         { 
             var client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://localhost:5000");
+            client.BaseAddress = new Uri(_configuration["DomainString"]);
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",request.BearerToken);
             var response = await client.GetAsync("api/users/paging?pageIndex="+$"{request.PageIndex}&pageSize={request.PageSize}&keyword={request.Keyword}");
             var body = await response.Content.ReadAsStringAsync();
@@ -72,7 +75,7 @@ namespace admin_webapp.Services
         public async Task<ApiResult<bool>> RegisterUser(RegisterRequest registerRequest)
         {
             var client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://localhost:5000");
+            client.BaseAddress = new Uri(_configuration["DomainString"]);
 
             var json = JsonConvert.SerializeObject(registerRequest);
             var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
@@ -88,7 +91,7 @@ namespace admin_webapp.Services
         public async Task<ApiResult<bool>> UpdateUser(Guid id, UserUpdateRequest request)
         {
             var client = _httpClientFactory.CreateClient();
-            client.BaseAddress = new Uri("https://localhost:5000");
+            client.BaseAddress = new Uri(_configuration["DomainString"]);
             var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);

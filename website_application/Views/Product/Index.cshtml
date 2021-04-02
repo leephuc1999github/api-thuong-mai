@@ -1,110 +1,69 @@
 ﻿@using view_model.Common;
 @using view_model.Catalog.Products;
 @model ApiResult<PagedResult<ProductVm>>
-
+@{ 
+    var count = 1;
+}
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Products</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                    <li class="breadcrumb-item active">List</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">List Products</h3>
+                <div class="card-tools">
+                    <a class="btn btn-success" asp-action="Create" asp-controller="Product">Create New</a>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10px">#</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.ResultObj.Items)
+                        {
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.Name</td>
+                                <td>@item.Price</td>
+                            </tr>
+                            count++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+            @await Component.InvokeAsync("Pager", Model.ResultObj)
+        </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                DateCreated
-            </th>
-            <th>
-                Description
-            </th>
-            <th>
-                Details
-            </th>
-            <th>
-                LanguageId
-            </th>
-            <th>
-                OriginalPrice
-            </th>
-            <th>
-                Price
-            </th>
-            <th>
-                SeoDescription
-            </th>
-            <th>
-                SeoTitle
-            </th>
-            <th>
-                SeoAlias
-            </th>
-            <th>
-                Stock
-            </th>
-            <th>
-                ViewCount
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.ResultObj.Items) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateCreated)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Details)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LanguageId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OriginalPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SeoDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SeoTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SeoAlias)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Stock)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ViewCount)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->

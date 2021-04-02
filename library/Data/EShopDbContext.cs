@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace library.Data
 {
-    public class EShopDbContext  : DbContext
+    public class EShopDbContext : DbContext
     {
         public EShopDbContext(DbContextOptions<EShopDbContext> options) : base(options)
         {
@@ -29,7 +29,7 @@ namespace library.Data
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
             modelBuilder.ApplyConfiguration(new SlideConfiguration());
-            
+
 
             modelBuilder.SeedData();
         }

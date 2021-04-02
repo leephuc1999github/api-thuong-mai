@@ -28,20 +28,8 @@ namespace admin_webapp.Controllers
                 LanguageId = languageId
             };
             var data = await _productApiClient.GetPagings(request);
-            ViewBag.Keyword = keyword;
-
             var categories = await _categoryApiClient.GetAll(languageId);
-            ViewBag.Categories = categories.Select(x => new SelectListItem()
-            {
-                Text = x.Name,
-                Value = x.Id.ToString(),
-                Selected = categoryId.HasValue && categoryId.Value == x.Id
-            });
-
-            if (TempData["result"] != null)
-            {
-                ViewBag.SuccessMsg = TempData["result"];
-            }
+            
             return View(data);        
         }
     }

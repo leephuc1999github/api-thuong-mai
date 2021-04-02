@@ -7,3 +7,12 @@ E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.AssemblyInfo.c
 E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.csproj.CoreCompileInputs.cache
 E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.dll
 E:\MYPROJECT\web api\utilities\obj\Debug\netstandard2.0\utilities.pdb
+D:\MYPROJECT\api-thuong-mai\utilities\bin\Debug\netstandard2.0\utilities.deps.json
+D:\MYPROJECT\api-thuong-mai\utilities\bin\Debug\netstandard2.0\utilities.dll
+D:\MYPROJECT\api-thuong-mai\utilities\bin\Debug\netstandard2.0\utilities.pdb
+D:\MYPROJECT\api-thuong-mai\utilities\obj\Debug\netstandard2.0\utilities.csprojAssemblyReference.cache
+D:\MYPROJECT\api-thuong-mai\utilities\obj\Debug\netstandard2.0\utilities.AssemblyInfoInputs.cache
+D:\MYPROJECT\api-thuong-mai\utilities\obj\Debug\netstandard2.0\utilities.AssemblyInfo.cs
+D:\MYPROJECT\api-thuong-mai\utilities\obj\Debug\netstandard2.0\utilities.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\api-thuong-mai\utilities\obj\Debug\netstandard2.0\utilities.dll
+D:\MYPROJECT\api-thuong-mai\utilities\obj\Debug\netstandard2.0\utilities.pdb

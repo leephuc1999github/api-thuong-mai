@@ -11,7 +11,7 @@ namespace library.Configurations
             builder.ToTable("AppConfigs");
             builder.HasKey(ap => ap.Key);
             builder.Property(ap => ap.Value).IsRequired(true);
-                
+
         }
     }
 }

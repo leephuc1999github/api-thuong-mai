@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "OqK3vOzUC+QQWVMTC9UO3cb3vEVvTT1rlV6bTDzIo226R6CLB4lnEE/A3RlmhYXWqKNN9pTYuxdl5m6FLDtRUg==",
+  "dgSpecHash": "FNoXIrXbkSLCO/3MuRmnePeT+h/8skjxMTiBx9kshUh86WC+A3qpkxjnO/VPxFh0LI18GKxQGSZBKQLyuhucgA==",
   "success": true,
-  "projectFilePath": "E:\\MYPROJECT\\web api\\view_model\\view_model.csproj",
+  "projectFilePath": "D:\\MYPROJECT\\api-thuong-mai\\view_model\\view_model.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\phucl\\.nuget\\packages\\fluentvalidation\\8.5.0\\fluentvalidation.8.5.0.nupkg.sha512",
-    "C:\\Users\\phucl\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.5.0\\fluentvalidation.aspnetcore.8.5.0.nupkg.sha512",
-    "C:\\Users\\phucl\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.5.0\\fluentvalidation.dependencyinjectionextensions.8.5.0.nupkg.sha512",
-    "C:\\Users\\phucl\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.0\\microsoft.aspnetcore.http.features.3.1.0.nupkg.sha512",
-    "C:\\Users\\phucl\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
-    "C:\\Users\\phucl\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
-    "C:\\Users\\phucl\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
-    "C:\\Users\\phucl\\.nuget\\packages\\system.io.pipelines\\4.7.0\\system.io.pipelines.4.7.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\fluentvalidation\\8.5.0\\fluentvalidation.8.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.5.0\\fluentvalidation.aspnetcore.8.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.5.0\\fluentvalidation.dependencyinjectionextensions.8.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.0\\microsoft.aspnetcore.http.features.3.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.io.pipelines\\4.7.0\\system.io.pipelines.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
