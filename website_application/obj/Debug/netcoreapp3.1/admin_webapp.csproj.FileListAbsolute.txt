@@ -814,3 +814,8 @@ D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\admin_we
 D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\admin_webapp.dll
 D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\admin_webapp.pdb
 D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\admin_webapp.genruntimeconfig.cache
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\User\RoleAssign.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Navigation\Default.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
+E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs

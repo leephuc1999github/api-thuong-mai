@@ -255,6 +255,9 @@ namespace library.Migrations.EShopDb
                         .HasMaxLength(5)
                         .IsUnicode(false);
 
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDefault")
                         .HasColumnType("bit");
 
@@ -294,7 +297,7 @@ namespace library.Migrations.EShopDb
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 3, 24, 14, 41, 18, 840, DateTimeKind.Local).AddTicks(7319));
+                        .HasDefaultValue(new DateTime(2021, 4, 4, 17, 30, 20, 434, DateTimeKind.Local).AddTicks(6246));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -388,7 +391,7 @@ namespace library.Migrations.EShopDb
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 3, 24, 14, 41, 18, 857, DateTimeKind.Local).AddTicks(1951),
+                            DateCreated = new DateTime(2021, 4, 4, 17, 30, 20, 451, DateTimeKind.Local).AddTicks(2803),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,

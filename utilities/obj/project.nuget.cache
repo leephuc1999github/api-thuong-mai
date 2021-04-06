@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "w4nXZEnJDv1kOBG+OEGiRmPB/pGJXV21DeXQlPjH+Dhd5Xfna+psgZQG+SDC0i0KFd6Nh51qpjMNEXt2gnceXA==",
+  "dgSpecHash": "PBThfUPCnhXMW2XzLUDCYuZUIHQjf7ni5RD9F8NYeq/S90se978P+zDA1NzEE+WZ/2lsC91hXp2uuz/0PPk5aQ==",
   "success": true,
-  "projectFilePath": "D:\\MYPROJECT\\api-thuong-mai\\utilities\\utilities.csproj",
+  "projectFilePath": "E:\\MYPROJECT\\web api\\utilities\\utilities.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\phucl\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\phucl\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

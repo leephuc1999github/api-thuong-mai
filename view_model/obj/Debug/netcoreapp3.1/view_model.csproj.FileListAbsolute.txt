@@ -6,7 +6,6 @@ E:\MYPROJECT\web api\view_model\bin\Debug\netcoreapp3.1\view_model.dll
 E:\MYPROJECT\web api\view_model\bin\Debug\netcoreapp3.1\view_model.pdb
 E:\MYPROJECT\web api\view_model\obj\Debug\netcoreapp3.1\view_model.dll
 E:\MYPROJECT\web api\view_model\obj\Debug\netcoreapp3.1\view_model.pdb
-E:\MYPROJECT\web api\view_model\obj\Debug\netcoreapp3.1\view_model.csprojAssemblyReference.cache
 D:\MYPROJECT\api-thuong-mai\view_model\bin\Debug\netcoreapp3.1\view_model.deps.json
 D:\MYPROJECT\api-thuong-mai\view_model\bin\Debug\netcoreapp3.1\view_model.dll
 D:\MYPROJECT\api-thuong-mai\view_model\bin\Debug\netcoreapp3.1\view_model.pdb
@@ -16,3 +15,4 @@ D:\MYPROJECT\api-thuong-mai\view_model\obj\Debug\netcoreapp3.1\view_model.Assemb
 D:\MYPROJECT\api-thuong-mai\view_model\obj\Debug\netcoreapp3.1\view_model.csproj.CoreCompileInputs.cache
 D:\MYPROJECT\api-thuong-mai\view_model\obj\Debug\netcoreapp3.1\view_model.dll
 D:\MYPROJECT\api-thuong-mai\view_model\obj\Debug\netcoreapp3.1\view_model.pdb
+E:\MYPROJECT\web api\view_model\obj\Debug\netcoreapp3.1\view_model.csprojAssemblyReference.cache

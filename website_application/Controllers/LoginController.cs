@@ -48,6 +48,7 @@ namespace admin_webapp.Controllers
             };
 
             HttpContext.Session.SetString("Token", token);
+            HttpContext.Session.SetString("DefaultLanguageId", "en-US");
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 userPrincipal,

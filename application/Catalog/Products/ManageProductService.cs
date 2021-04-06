@@ -63,6 +63,7 @@ namespace application.Catalog.Products
                 Stock = request.Stock,
                 ViewCount = 0,
                 DateCreated = DateTime.Now,
+                
                 ProductTranslations = new List<ProductTranslation>() 
                 {
                     new ProductTranslation()
@@ -71,6 +72,7 @@ namespace application.Catalog.Products
                         Description = request.Description,
                         Details = request.Details,
                         SeoAlias = request.SeoAlias,
+                        SeoDescription = request.SeoDescription,
                         SeoTitle = request.SeoTitle,
                         LanguageId = request.LanguageId
                     }
@@ -111,21 +113,26 @@ namespace application.Catalog.Products
             
             return await _dbContext.SaveChangesAsync();
         }
-        public async Task<ApiResult<PagedResult<ProductVm>>> GetAllPaging(GetManageProductPagingRequest request)
+        public async Task<PagedResult<ProductVm>> GetAllPaging(GetManageProductPagingRequest request)
         {
             //1. Select join
             var query = from p in _dbContext.Products
                         join pt in _dbContext.ProductTranslations on p.Id equals pt.ProductId
-                        join pc in _dbContext.ProductInCategories on p.Id equals pc.ProductId 
-                        join c in _dbContext.Categories on pc.CategoryId equals c.Id
-                        select new { p, pt , pc , c};
+                        join pic in _dbContext.ProductInCategories on p.Id equals pic.ProductId into ppic
+                        from pic in ppic.DefaultIfEmpty()
+                        join c in _dbContext.Categories on pic.CategoryId equals c.Id into picc
+                        from c in picc.DefaultIfEmpty()
+                        join pi in _dbContext.ProductImages on p.Id equals pi.ProductId into ppi
+                        from pi in ppi.DefaultIfEmpty()
+                        where pt.LanguageId == request.LanguageId
+                        select new { p, pt, pic, pi };
             //2. filter
             if (!string.IsNullOrEmpty(request.Keyword))
                 query = query.Where(x => x.pt.Name.Contains(request.Keyword));
 
             if (request.CategoryId != null && request.CategoryId != 0)
             {
-                query = query.Where(item  => item.c.Id == request.CategoryId);
+                query = query.Where(item  => item.pic.CategoryId == request.CategoryId);
             }
 
             //3. Paging
@@ -148,7 +155,7 @@ namespace application.Catalog.Products
                     SeoTitle = x.pt.SeoTitle,
                     Stock = x.p.Stock,
                     ViewCount = x.p.ViewCount,
-                    ThumbnailImage = ""
+                    ThumbnailImage = x.pi.ImagePath
                 }).ToListAsync();
 
             //4. Select and projection
@@ -159,7 +166,7 @@ namespace application.Catalog.Products
                 PageIndex = request.PageIndex,
                 Items = data
             };
-            return new ApiSuccessResult<PagedResult<ProductVm>>(pagedResult);
+            return pagedResult;
 
         }
 
@@ -265,6 +272,14 @@ namespace application.Catalog.Products
             var productTranslation = await _dbContext.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == productId
             && x.LanguageId == languageId);
 
+            var categories = await (from c in _dbContext.Categories
+                                    join ct in _dbContext.CategoryTranslations on c.Id equals ct.CategoryId
+                                    join pic in _dbContext.ProductInCategories on c.Id equals pic.CategoryId
+                                    where pic.ProductId == productId && ct.LanguageId == languageId
+                                    select ct.Name).ToListAsync();
+
+            var image = await _dbContext.ProductImages.Where(x => x.ProductId == productId && x.IsDefault == true).FirstOrDefaultAsync();
+
             var productViewModel = new ProductVm()
             {
                 Id = product.Id,
@@ -279,7 +294,9 @@ namespace application.Catalog.Products
                 SeoDescription = productTranslation != null ? productTranslation.SeoDescription : null,
                 SeoTitle = productTranslation != null ? productTranslation.SeoTitle : null,
                 Stock = product.Stock,
-                ViewCount = product.ViewCount
+                ViewCount = product.ViewCount,
+                Categories = categories,
+                ThumbnailImage = image != null ? image.ImagePath : "no-image.jpg"
             };
             return productViewModel;
         }

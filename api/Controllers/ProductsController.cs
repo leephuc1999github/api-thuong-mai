@@ -9,7 +9,6 @@ namespace api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IPublicProductService _publicProductService;
@@ -48,6 +47,8 @@ namespace api.Controllers
         }
 
         [HttpPost]
+        [Consumes("multipart/form-data")]
+        [Authorize]
         public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
         {
             if (!ModelState.IsValid)
@@ -58,13 +59,13 @@ namespace api.Controllers
             if (productId == 0)
                 return BadRequest();
 
-            var product = await _manageProductService.GetById(productId, request.LanguageId);
-
-            return CreatedAtAction(nameof(GetById), new { id = productId }, product);
+            return Ok(true);
         }
 
-        [HttpPut]
-        public async Task<IActionResult> Update([FromForm] ProductUpdateRequest request)
+        [HttpPut("{productId}")]
+        [Consumes("multipart/form-data")]
+        [Authorize]
+        public async Task<IActionResult> Update([FromRoute] int productId, [FromForm] ProductUpdateRequest request)
         {
             if (!ModelState.IsValid)
             {
@@ -73,7 +74,7 @@ namespace api.Controllers
             var affectedResult = await _manageProductService.Update(request);
             if (affectedResult == 0)
                 return BadRequest();
-            return Ok();
+            return Ok(true);
         }
 
         [HttpDelete("{productId}")]

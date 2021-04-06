@@ -24,6 +24,7 @@ namespace application.System.Languages
             {
                 Id = x.Id,
                 Name = x.Name,
+                Icon = x.Icon,
                 IsDefault = x.IsDefault
             }).ToListAsync();
             return new ApiSuccessResult<List<LanguageVm>>(languages);
