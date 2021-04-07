@@ -819,3 +819,8 @@ E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Sha
 E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
 E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
 E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Navigation\Default.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\User\RoleAssign.cshtml.g.cs
