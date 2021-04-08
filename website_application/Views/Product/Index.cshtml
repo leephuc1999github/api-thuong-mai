@@ -93,7 +93,7 @@
                                 <td>@item.Price</td>
                                 <td>@item.Stock</td>
                                 <td>
-                                    <form method="post" asp-action="Delete" asp-controller="Product">
+                                    <form method="post" asp-action="Delete" asp-controller="Product" asp-route-id="@item.Id">
                                         <input hidden name="id" value="@item.Id" />
                                         <a href="/Product/Edit/@item.Id" style="padding-left:10px"><i class="fa fa-edit"></i></a>
                                         <button type="submit" class="btn-link" onclick="return confirm('Do you delete ?')"><i class="fa fa-trash"></i></button>

@@ -80,18 +80,17 @@ namespace application.Catalog.Products
             };
             if(request.ThumbnailImage != null)
             {
-                product.ProductImages = new List<ProductImage>()
+                List<ProductImage> images = new List<ProductImage>();
+                images.Add(new ProductImage()
                 {
-                    new ProductImage()
-                    {
-                        Caption = "Thumbnail Image",
-                        DateCreated = DateTime.Now,
-                        FileSize = request.ThumbnailImage.Length,
-                        ImagePath = await this.SaveFile(request.ThumbnailImage),
-                        IsDefault = true,
-                        SortOrder = 1
-                    }
-                };
+                    Caption = "Thumbnail Image",
+                    DateCreated = DateTime.Now,
+                    FileSize = request.ThumbnailImage.Length,
+                    ImagePath = await this.SaveFile(request.ThumbnailImage),
+                    IsDefault = true,
+                    SortOrder = 1
+                });
+                product.ProductImages = images;
             }
             _dbContext.Products.Add(product);
             return await _dbContext.SaveChangesAsync();

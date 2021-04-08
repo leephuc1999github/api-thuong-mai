@@ -1,8 +1,6 @@
 ﻿using admin_webapp.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Linq;
 using System.Threading.Tasks;
 using view_model.Catalog.Products;
 
@@ -91,6 +89,19 @@ namespace admin_webapp.Controllers
             }
             TempData["success"] = "false";
             ModelState.AddModelError("", "Cập nhật sản phẩm thất bại");
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _productApiClient.DeleteProduct(id);
+            if (result)
+            {
+                TempData["success"] = "true";
+                return RedirectToAction("Index");
+            }
+            TempData["success"] = "false";
             return RedirectToAction("Index");
         }
     }

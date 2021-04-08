@@ -83,7 +83,7 @@ namespace api.Controllers
             var affectedResult = await _manageProductService.Delete(productId);
             if (affectedResult == 0)
                 return BadRequest();
-            return Ok();
+            return Ok(true);
         }
 
         [HttpPatch("{productId}/{newPrice}")]

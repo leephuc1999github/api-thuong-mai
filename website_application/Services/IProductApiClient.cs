@@ -10,5 +10,6 @@ namespace admin_webapp.Services
         Task<bool> CreateProduct(ProductCreateRequest request);
         Task<ProductVm> GetById(int productId , string languageId);
         Task<bool> UpdateProduct(ProductUpdateRequest request);
+        Task<bool> DeleteProduct(int productId);
     }
 }

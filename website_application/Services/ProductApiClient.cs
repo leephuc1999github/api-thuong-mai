@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 using view_model.Catalog.Products;
 using view_model.Common;
@@ -61,6 +62,18 @@ namespace admin_webapp.Services
 
             var response = await client.PostAsync($"/api/products/", requestContent);
             return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> DeleteProduct(int productId)
+        {
+            var sessions = _httpContextAccessor.HttpContext.Session.GetString("Token");
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration["DomainString"]);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", sessions);
+            var response = await client.DeleteAsync($"api/products/{productId}");
+            var body = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<bool>(body);
+
         }
 
         public async Task<ProductVm> GetById(int productId , string languageId)
