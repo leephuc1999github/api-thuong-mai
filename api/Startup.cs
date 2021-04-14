@@ -5,6 +5,7 @@ using application.System.Languages;
 using application.System.Roles;
 using application.System.User;
 using application.System.Users;
+using application.Utilities.Menus;
 using application.Utilities.Slides;
 using FluentValidation.AspNetCore;
 using library.Data;
@@ -65,6 +66,7 @@ namespace api
             services.AddTransient<ILanguageService, LanguageService>();
             services.AddTransient<ISlideService, SlideService>();
             services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IMenuService, MenuService>();
             //services.AddTransient<IValidator<LoginRequest>,LoginRequestValidator>();
             //services.AddTransient<IValidator<RegisterRequest>, RegisterRequestValidator>();
             services.AddSwaggerGen(c =>

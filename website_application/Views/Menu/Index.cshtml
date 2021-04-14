@@ -1,0 +1,54 @@
+﻿@using view_model.Utilities.Menus;
+@model List<MenuItemVm>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var menuItems = @Html.Raw(ViewBag.MenuItems);
+            $("#jstree_menu_div").jstree({
+                'core': {
+                    'data': menuItems
+                }
+            });
+        })
+    </script>
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Menu</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Menu</a></li>
+                    <li class="breadcrumb-item active">Configuration</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title"><a href="javascript:void(0)">Configuration Menu</a></h3>
+                <div class="card-tools">
+                    <a class="btn btn-success" asp-action="Create" asp-controller="Product">Add SubMenuItem</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="jstree_menu_div"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

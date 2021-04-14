@@ -31,6 +31,7 @@ namespace website_application
             services.AddTransient<ICategoryApiClient,CategoryApiClient>();
             services.AddTransient<IRoleApiClient , RoleApiClient>();
             services.AddTransient<ILanguageApiClient, LanguageApiClient>();
+            services.AddTransient<IMenuApiClient, MenuApiClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

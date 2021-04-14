@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using view_model.Catalog.Categories;
 using view_model.Catalog.Products;
 using view_model.Common;
 
@@ -11,5 +12,6 @@ namespace admin_webapp.Services
         Task<ProductVm> GetById(int productId , string languageId);
         Task<bool> UpdateProduct(ProductUpdateRequest request);
         Task<bool> DeleteProduct(int productId);
+        Task<ApiResult<bool>> CategoryAssign(int productId, CategoryAssignRequest request);
     }
 }

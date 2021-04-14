@@ -285,6 +285,33 @@ namespace library.Migrations.EShopDb
                         });
                 });
 
+            modelBuilder.Entity("library.Models.ESHOP.MenuItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int>("State")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MenuItems");
+                });
+
             modelBuilder.Entity("library.Models.ESHOP.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -297,7 +324,7 @@ namespace library.Migrations.EShopDb
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 4, 4, 17, 30, 20, 434, DateTimeKind.Local).AddTicks(6246));
+                        .HasDefaultValue(new DateTime(2021, 4, 12, 15, 54, 7, 308, DateTimeKind.Local).AddTicks(443));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -391,7 +418,7 @@ namespace library.Migrations.EShopDb
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 4, 4, 17, 30, 20, 451, DateTimeKind.Local).AddTicks(2803),
+                            DateCreated = new DateTime(2021, 4, 12, 15, 54, 7, 327, DateTimeKind.Local).AddTicks(1774),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,

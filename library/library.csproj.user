@@ -3,6 +3,6 @@
   <PropertyGroup>
     <ShowAllFiles>true</ShowAllFiles>
     <_LastSelectedProfileId>D:\MYPROJECT\api-thuong-mai\web api\library\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
-    <ShowAllFiles>true</ShowAllFiles>
+    <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
 </Project>

@@ -29,6 +29,7 @@ namespace library.Data
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
             modelBuilder.ApplyConfiguration(new SlideConfiguration());
+            modelBuilder.ApplyConfiguration(new MenuItemConfiguration());
 
 
             modelBuilder.SeedData();
@@ -60,5 +61,6 @@ namespace library.Data
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Slide> Slides { get; set; }
+        public DbSet<MenuItem> MenuItems { get; set; }
     }
 }

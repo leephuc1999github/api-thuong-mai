@@ -46,9 +46,4 @@
   </ItemGroup>
 
 
-  <ItemGroup>
-    <Folder Include="user_content\" />
-  </ItemGroup>
-
-
 </Project>
