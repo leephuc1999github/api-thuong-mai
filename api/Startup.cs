@@ -29,15 +29,12 @@ namespace api
 {
     public class Startup
     {
-        private IConfigurationRoot _configurationRoot;
-        public Startup(IHostEnvironment hostEnvironment)
+        public Startup(IConfiguration configuration)
         {
-            _configurationRoot = new ConfigurationBuilder().SetBasePath(hostEnvironment.ContentRootPath)
-               .AddJsonFile("appsettings.json")
-               .Build();
+            Configuration = configuration;
         }
+        public IConfiguration Configuration { get; set; }
 
-        
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -49,10 +46,10 @@ namespace api
                 );
             
             services.AddDbContext<EShopDbContext>(options => 
-                options.UseSqlServer(_configurationRoot.GetConnectionString("EShopConnection"))    
+                options.UseSqlServer(Configuration["ConnectionStrings:EShopConnection"])    
             );
             services.AddDbContext<IdentityEShopDbContext>(options =>
-                options.UseSqlServer(_configurationRoot.GetConnectionString("IdentityEShopConnection"))
+                options.UseSqlServer(Configuration["ConnectionStrings:IdentityEShopConnection"])
             );
             services.AddTransient<IStorageService, FileStorageService>();
 
@@ -121,35 +118,13 @@ namespace api
                 {
                     ValidateIssuer = true,
                     ValidateAudience = true,
-                    ValidAudience = _configurationRoot["AuthSettings:Audience"],
-                    ValidIssuer = _configurationRoot["AuthSettings:Issuer"],
+                    ValidAudience = Configuration["AuthSettings:Audience"],
+                    ValidIssuer = Configuration["AuthSettings:Issuer"],
                     RequireExpirationTime = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configurationRoot["AuthSettings:Key"])),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["AuthSettings:Key"])),
                     ValidateIssuerSigningKey = true
                 };
             });
-            #region appdbcontext
-            //services.AddDbContext<AppDbContext>(options =>
-            //    options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection"))
-            //);
-            //services.AddScoped<IUserRepository, UserRepository>();
-
-            //services.AddTransient<IDoiTacRepository, DoiTacRepository>();
-            //services.AddTransient<IHopDongRepository, HopDongRepository>();
-            //services.AddTransient<ICuaHangRepository, CuaHangRepository>();
-            //services.AddTransient<IChiNhanhRepository, ChiNhanhRepository>();
-            //services.AddTransient<IGiamDocRepository, GiamDocRepository>();
-            //services.AddTransient<IGiamSatRepository, GiamSatRepository>();
-            //services.AddTransient<IKhachHangRepository, KhachHangRepository>();
-            //services.AddTransient<IKinhDoanhRepository, KinhDoanhRepository>();
-            //services.AddTransient<IMatHangRepository, MatHangRepository>();
-            //services.AddTransient<IMuaRepository, MuaRepository>();
-            //services.AddTransient<INhanVienRepository, NhanVienRepository>();
-            //services.AddTransient<ITinhThanhRepository, TinhThanhRepository>();
-            //services.AddTransient<INhanVienBaoVeRepository, NhanVienBaoVeRepository>();
-            //services.AddTransient<INhanVienQuanLyRepository, NhanVienQuanLyRepository>();
-            //services.AddTransient<INhanVienDaiDienRepository, NhanVienDaiDienRepository>();
-            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

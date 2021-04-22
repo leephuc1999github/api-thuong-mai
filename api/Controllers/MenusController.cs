@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using view_model.Utilities.Menus;
 
 namespace api.Controllers
 {
@@ -22,6 +23,17 @@ namespace api.Controllers
         {
             var menuItems = await _menuService.GetAll();
             return Ok(menuItems);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(MenuItemVm request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            //var result = _menuService.Create(request);
+            return Ok(true);
         }
     }
 }

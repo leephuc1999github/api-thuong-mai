@@ -1,0 +1,9 @@
+D:\MYPROJECT\api-thuong-mai\view_model\bin\Release\netcoreapp3.1\view_model.deps.json
+D:\MYPROJECT\api-thuong-mai\view_model\bin\Release\netcoreapp3.1\view_model.dll
+D:\MYPROJECT\api-thuong-mai\view_model\bin\Release\netcoreapp3.1\view_model.pdb
+D:\MYPROJECT\api-thuong-mai\view_model\obj\Release\netcoreapp3.1\view_model.csprojAssemblyReference.cache
+D:\MYPROJECT\api-thuong-mai\view_model\obj\Release\netcoreapp3.1\view_model.AssemblyInfoInputs.cache
+D:\MYPROJECT\api-thuong-mai\view_model\obj\Release\netcoreapp3.1\view_model.AssemblyInfo.cs
+D:\MYPROJECT\api-thuong-mai\view_model\obj\Release\netcoreapp3.1\view_model.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\api-thuong-mai\view_model\obj\Release\netcoreapp3.1\view_model.dll
+D:\MYPROJECT\api-thuong-mai\view_model\obj\Release\netcoreapp3.1\view_model.pdb

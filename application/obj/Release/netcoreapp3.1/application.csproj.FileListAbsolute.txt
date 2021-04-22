@@ -1,0 +1,16 @@
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\application.deps.json
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\application.dll
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\application.pdb
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\library.dll
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\utilities.dll
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\view_model.dll
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\library.pdb
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\utilities.pdb
+D:\MYPROJECT\api-thuong-mai\application\bin\Release\netcoreapp3.1\view_model.pdb
+D:\MYPROJECT\api-thuong-mai\application\obj\Release\netcoreapp3.1\application.csprojAssemblyReference.cache
+D:\MYPROJECT\api-thuong-mai\application\obj\Release\netcoreapp3.1\application.AssemblyInfoInputs.cache
+D:\MYPROJECT\api-thuong-mai\application\obj\Release\netcoreapp3.1\application.AssemblyInfo.cs
+D:\MYPROJECT\api-thuong-mai\application\obj\Release\netcoreapp3.1\application.csproj.CoreCompileInputs.cache
+D:\MYPROJECT\api-thuong-mai\application\obj\Release\netcoreapp3.1\application.csproj.CopyComplete
+D:\MYPROJECT\api-thuong-mai\application\obj\Release\netcoreapp3.1\application.dll
+D:\MYPROJECT\api-thuong-mai\application\obj\Release\netcoreapp3.1\application.pdb

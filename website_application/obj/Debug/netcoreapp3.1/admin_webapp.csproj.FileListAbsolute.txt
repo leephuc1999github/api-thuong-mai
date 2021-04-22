@@ -826,3 +826,7 @@ D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Vi
 D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\User\RoleAssign.cshtml.g.cs
 E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\CategoryAssign.cshtml.g.cs
 E:\MYPROJECT\web api\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Menu\Index.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Menu\Index.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Product\CategoryAssign.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\obj\Debug\netcoreapp3.1\Razor\Views\Menu\Create.cshtml.g.cs
+D:\MYPROJECT\api-thuong-mai\website_application\bin\Debug\netcoreapp3.1\appsettings.Production.json
